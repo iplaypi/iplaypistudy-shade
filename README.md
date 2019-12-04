@@ -1,0 +1,2 @@
+# iplaypistudy-shade
+maven,shade
