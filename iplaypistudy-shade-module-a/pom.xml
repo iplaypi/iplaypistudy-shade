@@ -19,6 +19,13 @@
             <groupId>org.playpi.study</groupId>
             <artifactId>iplaypistudy-shade-module-b</artifactId>
             <version>${parent.version}</version>
+            <!-- 这里排除会导致调用ModuleBRun.run()时出现NoSuchMethodError -->
+<!--            <exclusions>
+                <exclusion>
+                    <groupId>com.google.guava</groupId>
+                    <artifactId>guava</artifactId>
+                </exclusion>
+            </exclusions>-->
         </dependency>
         <!-- 直接依赖module-b/c,会导致guava冲突,可以在c中做shade -->
         <dependency>
@@ -27,11 +34,11 @@
             <version>${parent.version}</version>
         </dependency>
         <!-- 也可以基于c做一个独立的c-shade模块 -->
-<!--        <dependency>
-            <groupId>org.playpi.study</groupId>
-            <artifactId>iplaypistudy-shade-module-c-shade</artifactId>
-            <version>${parent.version}</version>
-        </dependency>-->
+        <!--        <dependency>
+                    <groupId>org.playpi.study</groupId>
+                    <artifactId>iplaypistudy-shade-module-c-shade</artifactId>
+                    <version>${parent.version}</version>
+                </dependency>-->
     </dependencies>
 
     <build>

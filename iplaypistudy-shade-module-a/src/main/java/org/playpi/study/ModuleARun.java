@@ -1,7 +1,5 @@
 package org.playpi.study;
 
-import com.google.common.base.Objects;
-import com.google.common.base.Strings;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -13,7 +11,7 @@ public class ModuleARun {
     public static void main(String[] args) {
         log.info("====Hello World!");
         run();
-        runGuava();
+//        runGuava();
     }
 
     /**
@@ -36,14 +34,17 @@ public class ModuleARun {
      * 所以:
      * 制作shade只是可以保证ModuleCRun.run()正常执行,并不能保证Strings.lenientFormat可用(连编译都无法通过)
      */
-    public static void runGuava() {
-        log.info("====开始执行module-a的guava v26.0-jre代码");
+/*    public static void runGuava() {
+        log.info("====开始执行module-a的guava v19.0代码");
         Objects.ToStringHelper toStringHelper = Objects.toStringHelper(new Object());
         toStringHelper.add("in", "in");
         toStringHelper.add("out", "out");
         log.info("====[{}]", toStringHelper.toString());
+        log.info("====module-a的guava v19.0代码执行完成");
+        log.info("");
+        log.info("====开始执行module-a的guava v26.0-jre代码");
 //        log.info("====[{}]", Strings.lenientFormat("", "in", "out"));
         log.info("====module-a的guava v26.0-jre代码执行完成");
-    }
+    }*/
 
 }
