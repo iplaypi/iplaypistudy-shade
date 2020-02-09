@@ -26,6 +26,7 @@
                   <mainClass>org.playpi.study.ModuleARun</mainClass>
                 </transformer>
               </transformers>
+              <shadedClassifierName>jar-with-dependencies</shadedClassifierName>
             </configuration>
           </execution>
         </executions>

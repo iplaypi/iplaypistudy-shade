@@ -29,17 +29,21 @@
     <build>
         <plugins>
 
+            <!-- 非常好用的shade插件 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>${maven-shade-plugin.version}</version>
                 <executions>
                     <execution>
+                        <!-- Maven的生命周期 -->
                         <phase>package</phase>
                         <goals>
+                            <!-- 插件目标 -->
                             <goal>shade</goal>
                         </goals>
                         <configuration>
+                            <!-- 配置多版本jar包中类路径的重命名 -->
                             <relocations>
                                 <relocation>
                                     <pattern>com.google.common</pattern>
