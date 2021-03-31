@@ -15,7 +15,7 @@
     <url>https://www.playpi.org</url>
 
     <properties>
-        <module.c.guava.version>26.0-jre</module.c.guava.version>
+        <module.c.guava.version>29.0-jre</module.c.guava.version>
     </properties>
 
     <dependencies>
